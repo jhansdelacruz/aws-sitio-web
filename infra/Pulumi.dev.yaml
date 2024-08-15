@@ -1,5 +1,10 @@
 config:
+  aws-oidc:escEnv: aws-oidc-env
+  aws-oidc:oidcIdpUrl: https://api.pulumi.com/oidc
+  aws-oidc:thumbprint: 9e99a48a9960b14926bb7f3b02e22da2b0ab7280
   aws:region: us-east-1
   sitioweb:errorDocument: error.html
   sitioweb:indexDocument: index.html
   sitioweb:path: ./www
+environment:
+  - aws-oidc-env

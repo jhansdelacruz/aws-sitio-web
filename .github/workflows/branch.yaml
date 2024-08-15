@@ -30,8 +30,7 @@ jobs:
         uses: pulumi/auth-actions@v1
         with:
           organization: jhansdelacruz
-          requested-token-type: urn:pulumi:token-type:access_token:user
-          export-environment-variables: true
+          requested-token-type: urn:pulumi:token-type:access_token:personal
 
       - name: Create the resources
         uses: pulumi/actions@v5

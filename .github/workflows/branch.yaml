@@ -2,7 +2,7 @@ name: branch
 
 on:
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
   workflow_dispatch:
 
@@ -26,7 +26,7 @@ jobs:
       - name: Create the resources
         uses: pulumi/actions@v5
         with:
-          command: up
+          command: destroy
           stack-name: jhansdelacruz/dev
           work-dir: ./infra
         env:

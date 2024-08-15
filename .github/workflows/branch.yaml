@@ -1,4 +1,4 @@
-name: branch
+name: CI/CD Pulumi
 
 on:
   pull_request:
@@ -10,6 +10,9 @@ jobs:
   pulumi-up:
     name: pulumi-up
     runs-on: self-hosted
+    permissions:
+      id-token: write
+      contents: read
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -28,6 +31,7 @@ jobs:
         with:
           organization: jhansdelacruz
           requested-token-type: urn:pulumi:token-type:access_token:organization
+          export-environment-variables: true
 
       - name: Create the resources
         uses: pulumi/actions@v5

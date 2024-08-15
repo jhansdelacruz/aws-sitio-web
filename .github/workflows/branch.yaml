@@ -31,6 +31,8 @@ jobs:
         with:
           organization: jhansdelacruz
           requested-token-type: urn:pulumi:token-type:access_token:personal
+          scope: user:jhansdelacruz
+          export-environment-variables: true
 
       - name: Create the resources
         uses: pulumi/actions@v5

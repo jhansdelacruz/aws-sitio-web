@@ -1,5 +1,4 @@
 config:
-  aws:profile: adm-dns
   aws:region: us-east-1
   sitioweb:errorDocument: error.html
   sitioweb:indexDocument: index.html

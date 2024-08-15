@@ -37,6 +37,6 @@ jobs:
       - name: Create the resources
         uses: pulumi/actions@v5
         with:
-          command: destroy
+          command: up
           stack-name: jhansdelacruz/dev
           work-dir: ./infra
